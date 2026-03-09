@@ -11,20 +11,19 @@ linters:
     - gocritic
     - revive
     - misspell
-    - gofumpt
+    - gosec
+  settings:
+    revive:
+      rules:
+        - name: exported
+          arguments:
+            - "checkPrivateReceivers"
+    gocritic:
+      enabled-tags:
+        - diagnostic
+        - style
+        - performance
 
 formatters:
   enable:
     - gofumpt
-
-linters-settings:
-  revive:
-    rules:
-      - name: exported
-        arguments:
-          - "checkPrivateReceivers"
-  gocritic:
-    enabled-tags:
-      - diagnostic
-      - style
-      - performance
