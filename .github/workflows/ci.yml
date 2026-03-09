@@ -12,5 +12,3 @@ permissions:
 jobs:
   ci:
     uses: voyagi/.github-workflows/.github/workflows/go-ci.yml@main
-    with:
-      run-tests: false
