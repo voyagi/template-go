@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    uses: voyagi/.github-workflows/.github/workflows/go-ci.yml@main
+    with:
+      run-tests: false
